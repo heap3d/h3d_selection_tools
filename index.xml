@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="801">
+	<kit name="h3d_selection_tools" restart="YES">
+		<source target="h3d_selection_tools/index.CFG">index.CFG</source>
+	</kit>
+	<message button="Help">h3d_selection_tools Kit installation complete.</message>
+</package>
