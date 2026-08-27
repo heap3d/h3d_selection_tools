@@ -97,19 +97,17 @@ def get_polygons_find_by_selected(mesh, selected_polys):
     return selected_polys
 
 
-def get_polygons_most_vertex_count(mesh):
-    if not mesh:
-        return []
-    polygons = sorted(mesh.geometry.polygons, key=lambda poly: poly.numVertices, reverse=True)
+def get_polygons_most_vertex_count(mesh: modo.Mesh) -> modo.MeshPolygon:
+    geometry = mesh.geometry
+    if not geometry:
+        raise ValueError('Mesh has no geometry')
+    polygons = geometry.polygons
     if not polygons:
-        return []
-    max_vertexcount = polygons[0].numVertices
-    polys = []
-    for polygon in polygons:
-        if polygon.numVertices != max_vertexcount:
-            break
-        polys.append(polygon)
-    return polys
+        raise ValueError('Mesh has no polygons')
+
+    sorted_polygons = sorted(polygons, key=lambda poly: poly.numVertices, reverse=True)
+
+    return sorted_polygons[0]
 
 
 def get_polygons_by_flat_area(mesh: modo.Mesh, angle: float) -> tuple[tuple[tuple[modo.MeshPolygon, ...], float], ...]:

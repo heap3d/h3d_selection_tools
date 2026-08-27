@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # ================================
-# (C)2024-2026 Dmytro Holub
+# (C)2026 Dmytro Holub
 # heap3d@gmail.com
 # --------------------------------
 # modo python
 # EMAG
-# select polygon with most vertices count
+# select 2nd largest polygons 'flat' area in selected mesh
 # ================================
 
 import modo
@@ -13,16 +13,18 @@ import modo.constants as c
 import lx
 import uuid
 
+from h3d_utilites.scripts.h3d_utils import get_user_value
+
 import h3d_selection_tools.scripts.h3d_kit_constants as h3dc
 from h3d_selection_tools.scripts.get_polygons_operations import (
+    get_polygons_by_2nd_largest_flat_area,
     remove_item_selection_set,
-    get_polygons_most_vertex_count,
 )
 
 from h3d_utilites.scripts.h3d_utils import execution_time_alarm
 
 
-@execution_time_alarm('Select Most Vertices Polygon')
+@execution_time_alarm('Select 2nd Largest Polygons Area')
 def main():
     scene = modo.Scene()
 
@@ -32,10 +34,12 @@ def main():
 
     matched_polys = []
 
+    ANGLE_THRESHOLD = get_user_value(h3dc.USER_VAL_NAME_COPLANAR_ANGLE)
     for mesh in selected_meshes:
-        center_poly = get_polygons_most_vertex_count(mesh)
-        matched_polys.append(center_poly)
-        lx.eval('select.type item')
+        center_polys = get_polygons_by_2nd_largest_flat_area(mesh, ANGLE_THRESHOLD)
+        if not center_polys:
+            continue
+        matched_polys += center_polys
         lx.eval('select.editSet {{{}}} add item:{}'.format(selection_set_name, mesh.id))
 
     # select processed meshes
