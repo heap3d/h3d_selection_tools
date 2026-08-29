@@ -3,14 +3,20 @@
 	<kit name="h3d_selection_tools" restart="YES">
 		<source target="h3d_selection_tools/index.CFG">index.CFG</source>
 		<source target="h3d_selection_tools/scripts/center_utilites.py">scripts/center_utilites.py</source>
+		<source target="h3d_selection_tools/scripts/filter_nonzero_transform_items.py">scripts/filter_nonzero_transform_items.py</source>
+		<source target="h3d_selection_tools/scripts/filter_zero_transform_items.py">scripts/filter_zero_transform_items.py</source>
 		<source target="h3d_selection_tools/scripts/find_matching_meshes.py">scripts/find_matching_meshes.py</source>
 		<source target="h3d_selection_tools/scripts/get_mesh_template_stats.py">scripts/get_mesh_template_stats.py</source>
 		<source target="h3d_selection_tools/scripts/get_polygons_operations.py">scripts/get_polygons_operations.py</source>
 		<source target="h3d_selection_tools/scripts/h3d_kit_constants.py">scripts/h3d_kit_constants.py</source>
+		<source target="h3d_selection_tools/scripts/items_rename_regex.py">scripts/items_rename_regex.py</source>
+		<source target="h3d_selection_tools/scripts/items_select_regex.py">scripts/items_select_regex.py</source>
 		<source target="h3d_selection_tools/scripts/mesh_islands_to_items.py">scripts/mesh_islands_to_items.py</source>
 		<source target="h3d_selection_tools/scripts/modo_get_mesh_volume_buggy.py">scripts/modo_get_mesh_volume_buggy.py</source>
 		<source target="h3d_selection_tools/scripts/select_largest_poly.py">scripts/select_largest_poly.py</source>
+		<source target="h3d_selection_tools/scripts/select_meshref_meshes.py">scripts/select_meshref_meshes.py</source>
 		<source target="h3d_selection_tools/scripts/select_most_vertices_poly.py">scripts/select_most_vertices_poly.py</source>
+		<source target="h3d_selection_tools/scripts/select_nonzero_transform_items.py">scripts/select_nonzero_transform_items.py</source>
 		<source target="h3d_selection_tools/scripts/select_polygons_by_2nd_largest_flat_area.py">scripts/select_polygons_by_2nd_largest_flat_area.py</source>
 		<source target="h3d_selection_tools/scripts/select_polygons_by_largest_flat_area.py">scripts/select_polygons_by_largest_flat_area.py</source>
 		<source target="h3d_selection_tools/scripts/select_polygons_by_middle_flat_area.py">scripts/select_polygons_by_middle_flat_area.py</source>
@@ -18,6 +24,7 @@
 		<source target="h3d_selection_tools/scripts/select_poly_by_template.py">scripts/select_poly_by_template.py</source>
 		<source target="h3d_selection_tools/scripts/select_poly_by_template_Y_axis copy.py">scripts/select_poly_by_template_Y_axis copy.py</source>
 		<source target="h3d_selection_tools/scripts/select_poly_by_template_Y_axis.py">scripts/select_poly_by_template_Y_axis.py</source>
+		<source target="h3d_selection_tools/scripts/select_zero_transform_items.py">scripts/select_zero_transform_items.py</source>
 	</kit>
 	<message button="Help">h3d_selection_tools Kit installation complete.</message>
 </package>
