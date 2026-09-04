@@ -16,7 +16,7 @@ import uuid
 from h3d_utilites.scripts.h3d_utils import get_user_value
 
 import h3d_selection_tools.scripts.h3d_kit_constants as h3dc
-from h3d_selection_tools.scripts.get_polygons_operations import (
+from h3d_selection_tools.scripts.geometry_stats_operations import (
     get_polygons_by_middle_flat_area,
     remove_item_selection_set,
 )
