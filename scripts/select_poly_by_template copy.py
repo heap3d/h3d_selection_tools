@@ -15,7 +15,7 @@ import uuid
 
 import h3d_selection_tools.scripts.h3d_kit_constants as h3dc
 from h3d_selection_tools.scripts.find_matching_meshes import get_similar_mesh_center_polys
-from h3d_selection_tools.scripts.get_polygons_operations import (
+from h3d_selection_tools.scripts.geometry_stats_operations import (
     get_polygons_find_by_percentage,
     remove_item_selection_set,
 )

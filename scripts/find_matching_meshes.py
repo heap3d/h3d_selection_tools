@@ -16,7 +16,7 @@ import lx
 from h3d_utilites.scripts.h3d_utils import get_user_value
 
 import h3d_selection_tools.scripts.h3d_kit_constants as h3dc
-from h3d_selection_tools.scripts.mesh_islands_to_items import is_mesh_similar, DetectOptions
+from scripts.geometry_stats_operations import is_mesh_similar, DetectOptions
 from h3d_selection_tools.scripts.center_utilites import COLOR_PROCESSED
 
 
