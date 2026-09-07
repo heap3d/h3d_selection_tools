@@ -21,6 +21,10 @@
 		<source target="h3d_selection_tools/scripts/select_item_groups.py">scripts/select_item_groups.py</source>
 		<source target="h3d_selection_tools/scripts/select_largest_poly.py">scripts/select_largest_poly.py</source>
 		<source target="h3d_selection_tools/scripts/select_meshes_by_name_regex.py">scripts/select_meshes_by_name_regex.py</source>
+		<source target="h3d_selection_tools/scripts/select_meshes_by_selected_edges.py">scripts/select_meshes_by_selected_edges.py</source>
+		<source target="h3d_selection_tools/scripts/select_meshes_by_selected_geo.py">scripts/select_meshes_by_selected_geo.py</source>
+		<source target="h3d_selection_tools/scripts/select_meshes_by_selected_polygons.py">scripts/select_meshes_by_selected_polygons.py</source>
+		<source target="h3d_selection_tools/scripts/select_meshes_by_selected_vertices.py">scripts/select_meshes_by_selected_vertices.py</source>
 		<source target="h3d_selection_tools/scripts/select_meshes_from_selection.py">scripts/select_meshes_from_selection.py</source>
 		<source target="h3d_selection_tools/scripts/select_meshref_meshes.py">scripts/select_meshref_meshes.py</source>
 		<source target="h3d_selection_tools/scripts/select_mesh_instances_from_selection.py">scripts/select_mesh_instances_from_selection.py</source>
