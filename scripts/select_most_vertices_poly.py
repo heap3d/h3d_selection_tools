@@ -14,7 +14,7 @@ import lx
 import uuid
 
 import h3d_selection_tools.scripts.h3d_kit_constants as h3dc
-from h3d_selection_tools.scripts.get_polygons_operations import (
+from h3d_selection_tools.scripts.geometry_stats_operations import (
     remove_item_selection_set,
     get_polygons_most_vertex_count,
 )
@@ -33,10 +33,8 @@ def main():
     matched_polys = []
 
     for mesh in selected_meshes:
-        center_polys = get_polygons_most_vertex_count(mesh)
-        if not center_polys:
-            continue
-        matched_polys += center_polys
+        center_poly = get_polygons_most_vertex_count(mesh)
+        matched_polys.append(center_poly)
         lx.eval('select.type item')
         lx.eval('select.editSet {{{}}} add item:{}'.format(selection_set_name, mesh.id))
 
@@ -52,8 +50,6 @@ def main():
     lx.eval('select.drop polygon')
     for polygon in matched_polys:
         polygon.select()
-
-    print('done.')
 
 
 if __name__ == '__main__':

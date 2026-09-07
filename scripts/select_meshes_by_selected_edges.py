@@ -1,0 +1,33 @@
+#!/usr/bin/python
+# ================================
+# (C)2025 Dmytro Holub
+# heap3d@gmail.com
+# --------------------------------
+# modo python
+# EMAG
+# select mesh items who has edges selected
+# ================================
+
+import modo
+import lx
+
+from h3d_utilites.scripts.h3d_utils import execution_time_alarm
+
+from h3d_selection_tools.scripts.select_meshes_by_selected_geo import get_item_by_selected_edges
+
+
+@execution_time_alarm()
+def main():
+    meshes: list[modo.Mesh] = modo.Scene().items(itype='mesh')  # type: ignore
+
+    selected_by_component = get_item_by_selected_edges(meshes)
+
+    lx.eval('select.type item')
+
+    modo.Scene().deselect()
+    for item in selected_by_component:
+        item.select()
+
+
+if __name__ == '__main__':
+    main()
