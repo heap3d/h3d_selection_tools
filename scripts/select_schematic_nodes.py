@@ -13,11 +13,6 @@ import lx
 import modo
 
 
-def main():
-    selected_items = modo.Scene().selected
-    select_schematic_nodes(selected_items)
-
-
 class NodeSelection():
     ADD = 'add'
     SET = 'set'
@@ -28,9 +23,12 @@ class NodeSelection():
 def select_schematic_nodes(items: list[modo.Item], mode: str = NodeSelection.ADD) -> None:
     for item in items:
         schematic_node = item.itemGraph('schmItem').forward()[-1]  # type: ignore
-        evalstr = f'select.node {{{schematic_node.id}}} {mode} {{{schematic_node.id}}}'
-        print(evalstr)
-        lx.eval(evalstr)
+        lx.eval(f'select.node {{{schematic_node.id}}} {mode} {{{schematic_node.id}}}')
+
+
+def main():
+    selected_items = modo.Scene().selected
+    select_schematic_nodes(selected_items)
 
 
 if __name__ == '__main__':
