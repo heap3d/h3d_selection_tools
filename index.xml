@@ -16,9 +16,14 @@
 		<source target="h3d_selection_tools/scripts/select_children.py">scripts/select_children.py</source>
 		<source target="h3d_selection_tools/scripts/select_children_materials.py">scripts/select_children_materials.py</source>
 		<source target="h3d_selection_tools/scripts/select_deformable_meshes.py">scripts/select_deformable_meshes.py</source>
+		<source target="h3d_selection_tools/scripts/select_instance_source.py">scripts/select_instance_source.py</source>
 		<source target="h3d_selection_tools/scripts/select_invert.py">scripts/select_invert.py</source>
 		<source target="h3d_selection_tools/scripts/select_items_by_name_regex.py">scripts/select_items_by_name_regex.py</source>
+		<source target="h3d_selection_tools/scripts/select_items_used.py">scripts/select_items_used.py</source>
 		<source target="h3d_selection_tools/scripts/select_item_groups.py">scripts/select_item_groups.py</source>
+		<source target="h3d_selection_tools/scripts/select_item_instances.py">scripts/select_item_instances.py</source>
+		<source target="h3d_selection_tools/scripts/select_item_replicators.py">scripts/select_item_replicators.py</source>
+		<source target="h3d_selection_tools/scripts/select_item_source.py">scripts/select_item_source.py</source>
 		<source target="h3d_selection_tools/scripts/select_largest_poly.py">scripts/select_largest_poly.py</source>
 		<source target="h3d_selection_tools/scripts/select_meshes_by_name_regex.py">scripts/select_meshes_by_name_regex.py</source>
 		<source target="h3d_selection_tools/scripts/select_meshes_by_selected_edges.py">scripts/select_meshes_by_selected_edges.py</source>
@@ -39,6 +44,8 @@
 		<source target="h3d_selection_tools/scripts/select_poly_by_template.py">scripts/select_poly_by_template.py</source>
 		<source target="h3d_selection_tools/scripts/select_poly_by_template_Y_axis copy.py">scripts/select_poly_by_template_Y_axis copy.py</source>
 		<source target="h3d_selection_tools/scripts/select_poly_by_template_Y_axis.py">scripts/select_poly_by_template_Y_axis.py</source>
+		<source target="h3d_selection_tools/scripts/select_replicator_point_source.py">scripts/select_replicator_point_source.py</source>
+		<source target="h3d_selection_tools/scripts/select_replicator_prototype.py">scripts/select_replicator_prototype.py</source>
 		<source target="h3d_selection_tools/scripts/select_root_parent.py">scripts/select_root_parent.py</source>
 		<source target="h3d_selection_tools/scripts/select_same_reference.py">scripts/select_same_reference.py</source>
 		<source target="h3d_selection_tools/scripts/select_schematic_nodes.py">scripts/select_schematic_nodes.py</source>
