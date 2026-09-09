@@ -13,6 +13,7 @@
 		<source target="h3d_selection_tools/scripts/items_rename_regex.py">scripts/items_rename_regex.py</source>
 		<source target="h3d_selection_tools/scripts/items_select_regex.py">scripts/items_select_regex.py</source>
 		<source target="h3d_selection_tools/scripts/modo_get_mesh_volume_buggy.py">scripts/modo_get_mesh_volume_buggy.py</source>
+		<source target="h3d_selection_tools/scripts/reveal_meshref_in_explorer.py">scripts/reveal_meshref_in_explorer.py</source>
 		<source target="h3d_selection_tools/scripts/select_by_name_and_type.py">scripts/select_by_name_and_type.py</source>
 		<source target="h3d_selection_tools/scripts/select_by_name.py">scripts/select_by_name.py</source>
 		<source target="h3d_selection_tools/scripts/select_by_regex.py">scripts/select_by_regex.py</source>
@@ -51,7 +52,6 @@
 		<source target="h3d_selection_tools/scripts/select_replicator_point_source.py">scripts/select_replicator_point_source.py</source>
 		<source target="h3d_selection_tools/scripts/select_replicator_prototype.py">scripts/select_replicator_prototype.py</source>
 		<source target="h3d_selection_tools/scripts/select_root_parent.py">scripts/select_root_parent.py</source>
-		<source target="h3d_selection_tools/scripts/select_same_reference.py">scripts/select_same_reference.py</source>
 		<source target="h3d_selection_tools/scripts/select_schematic_nodes.py">scripts/select_schematic_nodes.py</source>
 		<source target="h3d_selection_tools/scripts/select_siblings.py">scripts/select_siblings.py</source>
 		<source target="h3d_selection_tools/scripts/select_siblings_byname.py">scripts/select_siblings_byname.py</source>
