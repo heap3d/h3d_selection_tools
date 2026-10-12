@@ -58,11 +58,25 @@ def get_meshref_basename(meshref: modo.Item) -> str:
 
 
 def get_subdir_files(dirpath: str) -> list[str]:
+    """Get all files in a directory and its subdirectories.
+    In case of duplicates, the earliest occurrence is kept.
+
+    Args:
+        dirpath (str): path to the directory to search for files
+
+    Returns:
+        list[str]: list of file paths
+    """
     filepaths: list[str] = []
+    file_mod_times: dict[str, float] = {}
     for root, dirs, files in os.walk(dirpath):
         for file in files:
-            filepaths.append(os.path.join(root, file))
+            filepath = os.path.join(root, file)
+            mod_time = os.path.getmtime(filepath)
+            if filepath not in file_mod_times or mod_time < file_mod_times[filepath]:
+                file_mod_times[filepath] = mod_time
 
+    filepaths = list(file_mod_times.keys())
     return filepaths
 
 
