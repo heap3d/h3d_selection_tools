@@ -3,6 +3,7 @@
 	<kit name="h3d_selection_tools" restart="YES">
 		<source target="h3d_selection_tools/index.CFG">index.CFG</source>
 		<source target="h3d_selection_tools/scripts/center_utilites.py">scripts/center_utilites.py</source>
+		<source target="h3d_selection_tools/scripts/collect_meshref_files.py">scripts/collect_meshref_files.py</source>
 		<source target="h3d_selection_tools/scripts/filter_nonzero_transform_items.py">scripts/filter_nonzero_transform_items.py</source>
 		<source target="h3d_selection_tools/scripts/filter_topmost_selected.py">scripts/filter_topmost_selected.py</source>
 		<source target="h3d_selection_tools/scripts/filter_zero_transform_items.py">scripts/filter_zero_transform_items.py</source>

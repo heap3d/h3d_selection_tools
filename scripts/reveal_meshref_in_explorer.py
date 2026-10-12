@@ -12,9 +12,36 @@ import os
 import modo
 import modo.constants as c
 
-from h3d_utilites.scripts.h3d_utils import reveal_in_explorer
+from h3d_utilites.scripts.h3d_utils import (
+    reveal_in_explorer,
+    execution_time_alarm,
+)
 
 from h3d_selection_tools.scripts.select_nonzero_meshrefs import is_meshref
+
+
+@execution_time_alarm('Revealing meshrefs in explorer')
+def main():
+    selected = modo.Scene().selectedByType(itype=c.LOCATOR_TYPE, superType=True)
+    meshrefs = [item for item in selected if is_meshref(item)]
+
+    if not meshrefs:
+        print('No meshrefs selected')
+        return
+
+    scenepath = modo.Scene().filename
+    scenedir = os.path.dirname(scenepath)
+    subdir_files = get_subdir_files(scenedir)
+
+    filepaths: set[str] = set()
+    for meshref in meshrefs:
+        basename = get_meshref_basename(meshref)
+        for filepath in subdir_files:
+            if os.path.basename(filepath) == f'{basename}.lxo':
+                filepaths.add(filepath)
+
+    for filepath in filepaths:
+        reveal_in_explorer(filepath)
 
 
 def get_meshref_basename(meshref: modo.Item) -> str:
@@ -37,29 +64,6 @@ def get_subdir_files(dirpath: str) -> list[str]:
             filepaths.append(os.path.join(root, file))
 
     return filepaths
-
-
-def main():
-    selected = modo.Scene().selectedByType(itype=c.LOCATOR_TYPE, superType=True)
-    meshrefs = [item for item in selected if is_meshref(item)]
-
-    if not meshrefs:
-        print('No meshrefs selected')
-        return
-
-    scenepath = modo.Scene().filename
-    scenedir = os.path.dirname(scenepath)
-    subdir_files = get_subdir_files(scenedir)
-
-    filepaths: set[str] = set()
-    for meshref in meshrefs:
-        basename = get_meshref_basename(meshref)
-        for filepath in subdir_files:
-            if os.path.basename(filepath) == f'{basename}.lxo':
-                filepaths.add(filepath)
-
-    for filepath in filepaths:
-        reveal_in_explorer(filepath)
 
 
 if __name__ == '__main__':
