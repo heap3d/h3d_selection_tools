@@ -42,6 +42,7 @@
 		<source target="h3d_selection_tools/scripts/select_nondeformable_meshes.py">scripts/select_nondeformable_meshes.py</source>
 		<source target="h3d_selection_tools/scripts/select_nonzero_meshrefs.py">scripts/select_nonzero_meshrefs.py</source>
 		<source target="h3d_selection_tools/scripts/select_nonzero_transform_items.py">scripts/select_nonzero_transform_items.py</source>
+		<source target="h3d_selection_tools/scripts/select_one_step_children.py">scripts/select_one_step_children.py</source>
 		<source target="h3d_selection_tools/scripts/select_parent.py">scripts/select_parent.py</source>
 		<source target="h3d_selection_tools/scripts/select_polygons_by_2nd_largest_flat_area.py">scripts/select_polygons_by_2nd_largest_flat_area.py</source>
 		<source target="h3d_selection_tools/scripts/select_polygons_by_largest_flat_area.py">scripts/select_polygons_by_largest_flat_area.py</source>
